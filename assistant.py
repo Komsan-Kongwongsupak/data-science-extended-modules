@@ -150,6 +150,6 @@ def export_train_test(X_train, X_test, y_train, y_test, path, validate=False):
         y_train.to_csv(os.path.join(path, "y_train_train.csv"), index=False)
         y_test.to_csv(os.path.join(path, "y_validate.csv"), index=False)
 
-def split_and_export(df, target, test_ratio, path):
+def split_and_export(df, target, test_ratio, path, validate=False):
     X_train, X_test, y_train, y_test = split_data(df, target, test_ratio)
-    export_train_test(X_train, X_test, y_train, y_test, path)
+    export_train_test(X_train, X_test, y_train, y_test, path, validate)
