@@ -74,11 +74,14 @@ class report():
 
     # Display a summary of the DataFrame
     def show(self):
+        print("=====================================================")
         print(f"number of columns: {self.n_cols}")
         print(f"number of rows: {self.n_rows}")
-        print(f"number of duplicates: {self.n_dups}\n")
+        print(f"number of duplicates: {self.n_dups}")
+        print("=====================================================")
         print(f"number of numerical columns: {len(self.df_numr)}")
         print(f"number of categorical columns: {len(self.df_catg)}")
+        print("=====================================================")
     
     # Export the report to files
     def export(self, dir=None):
